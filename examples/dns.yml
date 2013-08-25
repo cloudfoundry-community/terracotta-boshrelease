@@ -1,0 +1,60 @@
+---
+name: terracotta-demo # CHANGE
+director_uuid: DIRECTOR_UUID   # CHANGE
+
+releases:
+  - name: terracotta
+    version: 1
+
+compilation:
+  workers: 3
+  network: default
+  reuse_compilation_vms: true
+  cloud_properties:
+    instance_type: m1.small # CHANGE
+
+update:
+  canaries: 1
+  canary_watch_time: 30000-60000
+  update_watch_time: 30000-60000
+  max_in_flight: 4
+  max_errors: 1
+
+networks:
+  - name: floating
+    type: vip
+    cloud_properties: {}
+  - name: default
+    type: dynamic
+    cloud_properties:
+      security_groups:
+      - terracotta
+
+resource_pools:
+  - name: small
+    network: default
+    size: 1
+    stemcell:
+      name: bosh-stemcell
+      version: latest
+    cloud_properties:
+      instance_type: m1.small # CHANGE
+
+jobs:
+  - name: terracotta_node
+    release: terracotta
+    template:
+      - terracotta
+    instances: 1
+    resource_pool: small
+    persistent_disk: 4096
+    networks:
+    - name: default
+      default:
+      - dns
+      - gateway
+
+properties:
+  terracotta:
+    servers:
+      - 0.terracotta-node.default.terracotta-demo.microbosh

@@ -16,7 +16,12 @@ bosh upload release releases/terracotta-1.yml
 
 See [examples](https://github.com/cloudfoundry-community/terracotta-boshrelease/tree/master/examples) folder for example deployment files.
 
-Note: run `bosh status` to get your bosh director UUID.
+Notes:
+
+* run `bosh status` to get your bosh director UUID
+* create a security group `terracotta` with at least port 22 open and the ability for all VMs in the group to talk to each other; for example:
+
+![terracotta security group](https://www.evernote.com/shard/s3/sh/1f3f75fb-26d2-4069-940f-931f5645e40c/76420829f911ea25be39113d35d14077/deep/0/EC2%20Management%20Console.png)
 
 Finally, target and deploy. For deployment to a bosh running on aws:
 
