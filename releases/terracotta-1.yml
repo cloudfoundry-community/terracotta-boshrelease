@@ -1,0 +1,28 @@
+---
+packages:
+- name: java7
+  version: 1
+  sha1: !binary |-
+    ODNjMmY0OTI3MWI0YWJlZWJjYjJhNzc3ZGU5ZTAyYWRkZjI4NTNkZg==
+  fingerprint: !binary |-
+    YzhhZWYwNjU3ODllZDVlZjY5MmZhOWEwNTMzNmE4ZWQxMmFmOWM1Yg==
+  dependencies: []
+- name: terracotta
+  version: 1
+  sha1: !binary |-
+    NDk2M2M3ZTk4NGQ0MDliN2M3MWZjZmNmOGI0ODNlNTFkOTBmMTg0Yw==
+  fingerprint: !binary |-
+    ZmQyMTJkYzJlMDU5OGYzMTI3YThiZWFjYjIwMjVhMjkzZDM4NDIwNg==
+  dependencies:
+  - java7
+jobs:
+- name: terracotta
+  version: 1
+  fingerprint: !binary |-
+    OWFhZGI2NWQwNmQzNjU2NDI3MDkwZWU1YjM0NTYxYjkzZmEyNWUzZQ==
+  sha1: !binary |-
+    MjFmM2JhNjM1YTcwMjNiYjNkNGQ0NWMwNTUwMTFhMzcwMjEyNGUzMQ==
+commit_hash: 83224f6c
+uncommitted_changes: true
+name: terracotta
+version: 1
