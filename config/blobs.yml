@@ -1,11 +1,16 @@
 ---
 terracotta/terracotta-3.7.5.tar.gz:
-  object_id: 3cb26400-f6f0-4fe2-be13-39cbfa1d9cfb
+  object_id: a7c4de92-a899-46c3-b7c0-2d80096ce539
   sha: !binary |-
     N2Q5YTk3MWY2NDA5Y2MwMjExNDFjMjFmN2E1MWE0MjY0MWRhZjFhYw==
   size: 62254931
+java/openjdk-7u6-fcs-src-b24-28_aug_2012.zip:
+  object_id: a156d248-6134-496f-9fe2-7a810dce1ad4
+  sha: !binary |-
+    Njg5MTJkODQ0YTQ1ZmUzNjc0MWJiZGE3OGY3OTkzY2I4NjdjNGZiNQ==
+  size: 103777502
 java/jre-7u4-linux-x64.tar.gz:
-  object_id: 4c73eb0a-8fc6-4144-a47b-6b061f3c7dd7
+  object_id: ca8169e2-d929-40c7-9120-61198ac405f0
   sha: !binary |-
     MTEwOGQxNzQ0YmFhNzNiZjZjYWEyYWRmOTY1ZDBmNDg5ZWExZWY2MA==
   size: 32771159
